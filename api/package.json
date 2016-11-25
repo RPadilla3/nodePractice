@@ -1,0 +1,23 @@
+{
+  "name": "nodepractice",
+  "version": "1.0.0",
+  "description": "some basic node practice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RPadilla3/nodePractice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RPadilla3/nodePractice/issues"
+  },
+  "homepage": "https://github.com/RPadilla3/nodePractice#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "body-parser": "*"
+  }
+}
