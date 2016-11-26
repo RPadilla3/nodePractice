@@ -19,6 +19,11 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, 'public')));
 
 
+app.use(function(req, res, next) {
+  res.locals.errors = null;
+  next();
+});
+
 // express-validator Middleware
 
 app.use(expressValidator({
@@ -77,7 +82,12 @@ app.post('/users/add', function(req, res){
   var errors = req.validationErrors();
 
   if(errors){
-    console.log('errors');
+    res.render('index', {
+      title: 'Customers',
+      users: users,
+      errors: errors
+    });
+
   } else {
     var newUser = {
       first_name: req.body.first_name,
