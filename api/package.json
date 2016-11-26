@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/RPadilla3/nodePractice#readme",
   "dependencies": {
-    "express": "^4.14.0",
-    "body-parser": "*"
+    "body-parser": "*",
+    "ejs": "^2.5.2",
+    "express": "^4.14.0"
   }
 }
