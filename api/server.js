@@ -1,5 +1,3 @@
-console.log('server is running');
-
 var express = require('express');
 var bodyParser = require('body-parser');
 var path = require('path');
@@ -12,6 +10,7 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 // Body Parser Middleware
+// taken from githubs body-parser Middleware code
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
@@ -25,6 +24,7 @@ app.use(function(req, res, next) {
 });
 
 // express-validator Middleware
+// taken from githubs express-validator Middleware code
 
 app.use(expressValidator({
   errorFormatter: function(param, msg, value) {
@@ -96,12 +96,8 @@ app.post('/users/add', function(req, res){
     }
     console.log('success');
   }
-
-
-
-
 });
 
 function listening() {
-  console.log('Server Started on LocalHost:3000...');
+  console.log('Server Started on localhost:3000...');
 }
